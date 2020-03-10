@@ -13,6 +13,7 @@ d2.i=d2.i+1;
 System.out.println("Variable I of Demo2 "+d2.i);
 d2.j=d2.j+1;
 System.out.println("Variable J of Demo2 "+d2.j);
+  
 fun1();
 }
 }
