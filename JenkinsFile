@@ -1,0 +1,22 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('Pull code') {
+         steps {
+            git changelog: false, credentialsId: '6d35e6f1-148d-4897-a388-d1844db0a425', poll: false, url: 'https://github.com/ShravyaKamineni/JavaRepo.git'
+         }
+         
+      }
+       stage('Run java program') {
+        steps {
+             bat label: '', script: '''javac Demo2.java
+                java Demo2'''
+         
+         }
+         
+      }
+      
+       
+   }
+}
